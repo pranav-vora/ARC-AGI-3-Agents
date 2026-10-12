@@ -21,3 +21,10 @@ tests/recordings/not-a-recording.txt
 memory.db
 
 environment_files/
+
+# Stage 1 local tooling and evaluation artifacts
+.venv/
+.worktmp/
+.uv-cache/
+.pytest_cache/
+evaluation/runs/

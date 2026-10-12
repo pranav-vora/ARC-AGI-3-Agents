@@ -1,230 +1,139 @@
+"""Swarm orchestration contracts against the current Arcade toolkit API."""
+
 from unittest.mock import Mock, patch
 
 import pytest
-import requests
+from arc_agi import OperationMode
+from arc_agi.scorecard import EnvironmentScorecard
 
-from agents.structs import Card, GameState, Scorecard
 from agents.swarm import Swarm
 from agents.templates.random_agent import Random
 
 
-@pytest.mark.unit
-class TestSwarmInitialization:
-    def test_swarm_init(self):
-        with patch.dict("os.environ", {"ARC_API_KEY": "test-api-key"}):
-            swarm = Swarm(
-                agent="random", ROOT_URL="https://example.com", games=["game1", "game2"]
-            )
-
-            assert swarm.agent_name == "random"
-            assert swarm.ROOT_URL == "https://example.com"
-            assert swarm.GAMES == ["game1", "game2"]
-            assert swarm.agent_class == Random
-            assert len(swarm.threads) == 0
-            assert len(swarm.agents) == 0
-
-            assert swarm.headers["X-API-Key"] == "test-api-key"
-            assert swarm.headers["Accept"] == "application/json"
-            assert isinstance(swarm._session, requests.Session)
-            assert swarm._session.headers["Accept"] == "application/json"
+@pytest.fixture(autouse=True)
+def arcade():
+    """Unit tests must never discover/download real games or open remote cards."""
+    with patch("agents.swarm.Arcade") as factory:
+        instance = factory.return_value
+        instance.operation_mode = OperationMode.OFFLINE
+        instance.open_scorecard.return_value = "test-card-123"
+        instance.close_scorecard.return_value = EnvironmentScorecard(
+            card_id="test-card-123"
+        )
+        yield instance
 
 
 @pytest.mark.unit
-class TestSwarmScorecard:
-    @patch("agents.swarm.requests.Session.post")
-    def test_open_scorecard(self, mock_post):
-        mock_response = Mock()
-        mock_response.json.return_value = {"card_id": "test-card-123"}
-        mock_post.return_value = mock_response
+def test_swarm_initialization(arcade, monkeypatch):
+    monkeypatch.setenv("ARC_API_KEY", "test-api-key")
+    swarm = Swarm(
+        agent="random", ROOT_URL="https://example.com", games=["game1", "game2"]
+    )
+    assert swarm.agent_name == "random"
+    assert swarm.ROOT_URL == "https://example.com"
+    assert swarm.GAMES == ["game1", "game2"]
+    assert swarm.agent_class is Random
+    assert swarm.threads == swarm.agents == swarm.cleanup_threads == []
+    assert swarm.headers == {"X-API-Key": "test-api-key", "Accept": "application/json"}
+    assert swarm._arc is arcade
 
-        swarm = Swarm(agent="random", ROOT_URL="https://example.com", games=["game1"])
 
-        card_id = swarm.open_scorecard()
-        assert card_id == "test-card-123"
+@pytest.mark.unit
+@pytest.mark.parametrize("tags", [None, [], ["experiment1", "version2"]])
+def test_scorecard_open_delegates_tags_without_mutating_caller(arcade, tags):
+    kwargs = {} if tags is None else {"tags": tags}
+    original = None if tags is None else tags.copy()
+    swarm = Swarm(agent="random", ROOT_URL="", games=["game1"], **kwargs)
+    assert swarm.open_scorecard() == "test-card-123"
+    arcade.open_scorecard.assert_called_once_with(
+        tags=(tags or []) + ["agent", "random"]
+    )
+    assert tags == original
 
-        mock_post.assert_called_once()
-        call_args = mock_post.call_args
-        assert "/api/scorecard/open" in call_args[0][0]
 
-        json_data = call_args[1]["json"]
-        tags = json_data["tags"]
-        assert tags == ["agent", "random"]
+@pytest.mark.unit
+def test_scorecard_close_delegates_and_clears_active_card(arcade):
+    swarm = Swarm(agent="random", ROOT_URL="", games=["game1"])
+    swarm.card_id = "test-card-123"
+    result = swarm.close_scorecard("test-card-123")
+    assert result is arcade.close_scorecard.return_value
+    arcade.close_scorecard.assert_called_once_with("test-card-123")
+    assert swarm.card_id is None
+    arcade.close_scorecard.return_value = None
+    assert swarm.close_scorecard("missing") is None
 
-        mock_post.reset_mock()
-        mock_response.json.return_value = {
-            "error": "API Error",
-            "card_id": "error-card",
+
+@pytest.mark.unit
+def test_scorecard_errors_propagate(arcade):
+    swarm = Swarm(agent="random", ROOT_URL="", games=[])
+    arcade.open_scorecard.side_effect = RuntimeError("unavailable")
+    with pytest.raises(RuntimeError, match="unavailable"):
+        swarm.open_scorecard()
+    arcade.close_scorecard.side_effect = RuntimeError("close failed")
+    with pytest.raises(RuntimeError, match="close failed"):
+        swarm.close_scorecard("test-card")
+
+
+@pytest.mark.unit
+def test_agent_creation_and_thread_lifecycle(arcade):
+    swarm = Swarm(agent="random", ROOT_URL="", games=["game1", "game2", "game3"])
+    agent_factory = Mock()
+    agents = [Mock() for _ in swarm.GAMES]
+    agent_factory.side_effect = agents
+    swarm.agent_class = agent_factory
+    threads = [Mock() for _ in swarm.GAMES]
+    with patch("agents.swarm.Thread", side_effect=threads) as thread_factory:
+        result = swarm.main()
+    assert result is arcade.close_scorecard.return_value
+    assert swarm.agents == agents
+    assert thread_factory.call_count == 3
+    assert arcade.make.call_count == 3
+    for index, (game, agent, thread) in enumerate(zip(swarm.GAMES, agents, threads)):
+        assert arcade.make.call_args_list[index].args == (game,)
+        assert arcade.make.call_args_list[index].kwargs == {
+            "scorecard_id": "test-card-123"
         }
-
-        with patch("agents.swarm.logger") as mock_logger:
-            card_id = swarm.open_scorecard()
-            assert card_id == "error-card"
-            mock_logger.warning.assert_called_once()
-
-    @patch("agents.swarm.requests.Session.post")
-    def test_close_scorecard(self, mock_post):
-        card = Card(
-            game_id="test-game",
-            total_plays=2,
-            scores=[10, 20],
-            states=[GameState.GAME_OVER, GameState.WIN],
-            actions=[50, 60],
+        assert (
+            agent_factory.call_args_list[index].kwargs["arc_env"]
+            is arcade.make.return_value
         )
-
-        mock_response = Mock()
-        mock_response.json.return_value = {
-            "card_id": "test-card-123",
-            "cards": {"test-game": card.model_dump()},
+        assert thread_factory.call_args_list[index].kwargs == {
+            "target": agent.main,
+            "daemon": True,
         }
-        mock_post.return_value = mock_response
-
-        swarm = Swarm(agent="random", ROOT_URL="https://example.com", games=["game1"])
-
-        scorecard = swarm.close_scorecard("test-card-123")
-        assert isinstance(scorecard, Scorecard)
-        assert scorecard.card_id == "test-card-123"
-        assert swarm.card_id is None
-
-        mock_post.reset_mock()
-        mock_response.json.return_value = {"error": "Close error"}
-
-        with patch("agents.swarm.logger") as mock_logger:
-            scorecard = swarm.close_scorecard("test-card-123")
-            mock_logger.warning.assert_called_once()
+        thread.start.assert_called_once()
+        thread.join.assert_called_once()
+        agent.cleanup.assert_called_once_with(result)
 
 
 @pytest.mark.unit
-class TestSwarmAgentManagement:
-    @patch("agents.swarm.Swarm.open_scorecard")
-    @patch("agents.swarm.Swarm.close_scorecard")
-    @patch("agents.swarm.Thread")
-    def test_agent_threading(self, mock_thread, mock_close, mock_open):
-        mock_open.return_value = "test-card-123"
-        mock_close.return_value = Scorecard()
-
-        mock_thread_instances = [Mock() for _ in range(3)]
-        mock_thread.side_effect = mock_thread_instances
-
-        swarm = Swarm(
-            agent="random",
-            ROOT_URL="https://example.com",
-            games=["game1", "game2", "game3"],
-        )
-
-        assert swarm.agent_name == "random"
-        assert swarm.agent_class == Random
-        assert swarm.GAMES == ["game1", "game2", "game3"]
-
-        with patch.object(Random, "main") as mock_agent_main:
-            mock_agent_main.return_value = None
-
-            swarm.main()
-
-            assert mock_thread.call_count == 3
-            for mock_thread_instance in mock_thread_instances:
-                mock_thread_instance.start.assert_called_once()
-                mock_thread_instance.join.assert_called_once()
+def test_cleanup_with_and_without_scorecard(arcade):
+    swarm = Swarm(agent="random", ROOT_URL="", games=[])
+    agents = [Mock(), Mock()]
+    swarm.agents = agents
+    card = EnvironmentScorecard(card_id="test-card")
+    swarm.cleanup(card)
+    for agent in agents:
+        agent.cleanup.assert_called_once_with(card)
+        agent.reset_mock()
+    swarm.cleanup()
+    for agent in agents:
+        agent.cleanup.assert_called_once_with(None)
 
 
 @pytest.mark.unit
-class TestSwarmCleanup:
-    def test_cleanup(self):
-        swarm = Swarm(
-            agent="random", ROOT_URL="https://example.com", games=["game1", "game2"]
-        )
-
-        mock_agent1 = Mock()
-        mock_agent2 = Mock()
-        swarm.agents = [mock_agent1, mock_agent2]
-
-        mock_session = Mock()
-        swarm._session = mock_session
-
-        scorecard = Scorecard()
-        swarm.cleanup(scorecard)
-
-        mock_agent1.cleanup.assert_called_once_with(scorecard)
-        mock_agent2.cleanup.assert_called_once_with(scorecard)
-
-        mock_session.close.assert_called_once()
-
-        mock_agent = Mock()
-        swarm.agents = [mock_agent]
-
-        swarm.cleanup()
-        mock_agent.cleanup.assert_called_once_with(None)
-
-        delattr(swarm, "_session")
-        swarm.cleanup()
+def test_optional_legacy_session_cleanup(arcade):
+    swarm = Swarm(agent="random", ROOT_URL="", games=[])
+    swarm._session = Mock()
+    swarm.cleanup()
+    swarm._session.close.assert_called_once()
 
 
 @pytest.mark.unit
-class TestSwarmTags:
-    @patch("agents.swarm.requests.Session.post")
-    def test_open_scorecard_with_custom_tags(self, mock_post):
-        """Test that custom tags are sent when opening a scorecard"""
-        mock_response = Mock()
-        mock_response.json.return_value = {"card_id": "test-card-123"}
-        mock_post.return_value = mock_response
+def test_playback_tags(arcade):
+    from agents import AVAILABLE_AGENTS, Playback
 
-        custom_tags = ["experiment1", "version2", "test"]
-
-        swarm = Swarm(
-            agent="random",
-            ROOT_URL="https://example.com",
-            games=["game1"],
-            tags=custom_tags,
-        )
-
-        card_id = swarm.open_scorecard()
-        assert card_id == "test-card-123"
-
-        mock_post.assert_called_once()
-        call_args = mock_post.call_args
-        json_data = call_args[1]["json"]
-
-        assert json_data["tags"] == custom_tags + ["agent", "random"]
-
-    @patch("agents.swarm.requests.Session.post")
-    def test_open_scorecard_with_empty_tags(self, mock_post):
-        """Test that default tags are sent when no custom tags are provided"""
-        mock_response = Mock()
-        mock_response.json.return_value = {"card_id": "test-card-123"}
-        mock_post.return_value = mock_response
-
-        swarm = Swarm(
-            agent="random", ROOT_URL="https://example.com", games=["game1"], tags=[]
-        )
-
-        card_id = swarm.open_scorecard()
-        assert card_id == "test-card-123"
-
-        mock_post.assert_called_once()
-        call_args = mock_post.call_args
-        json_data = call_args[1]["json"]
-
-        assert json_data["tags"] == ["agent", "random"]
-
-    @patch("agents.swarm.requests.Session.post")
-    def test_open_scorecard_with_default_and_custom_tags(self, mock_post):
-        """Test that tags include both defaults and custom tags when set from main.py"""
-        mock_response = Mock()
-        mock_response.json.return_value = {"card_id": "test-card-123"}
-        mock_post.return_value = mock_response
-
-        custom_tags = ["experiment1", "version2"]
-
-        swarm = Swarm(
-            agent="random",
-            ROOT_URL="https://example.com",
-            games=["game1"],
-            tags=custom_tags,
-        )
-
-        card_id = swarm.open_scorecard()
-        assert card_id == "test-card-123"
-
-        mock_post.assert_called_once()
-        call_args = mock_post.call_args
-        json_data = call_args[1]["json"]
-        assert json_data["tags"] == custom_tags + ["agent", "random"]
+    name = "game.random.80.example-guid.recording.jsonl"
+    with patch.dict(AVAILABLE_AGENTS, {name: Playback}):
+        swarm = Swarm(agent=name, ROOT_URL="", games=["game"])
+    assert swarm.tags == ["playback", "example-guid"]

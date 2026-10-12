@@ -1,0 +1,1812 @@
+{
+  "scheduled_runs": 225,
+  "inspected_runs": 225,
+  "passed": true,
+  "issues": [],
+  "memory_audit_limit_mib": 1024,
+  "max_runtime_seconds": 36.67907039960846,
+  "peak_process_memory_mib": 408.67578125,
+  "failure_classification_note": "Hypotheses from traces, not proof of hidden mechanics; see representative source/observation inspection in FAILURE_MODES.md.",
+  "runs": [
+    {
+      "run": "ar25-0c556536-random-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ar25-0c556536-norepeat-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ar25-0c556536-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 373,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ar25-0c556536-random-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ar25-0c556536-norepeat-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ar25-0c556536-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 391,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ar25-0c556536-random-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ar25-0c556536-norepeat-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ar25-0c556536-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 332,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "bp35-0a0ad940-random-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "bp35-0a0ad940-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "bp35-0a0ad940-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "bp35-0a0ad940-random-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "bp35-0a0ad940-norepeat-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "bp35-0a0ad940-graph-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "bp35-0a0ad940-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "bp35-0a0ad940-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "bp35-0a0ad940-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 180,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cd82-fb555c5d-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cd82-fb555c5d-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cd82-fb555c5d-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cd82-fb555c5d-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cd82-fb555c5d-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cd82-fb555c5d-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cd82-fb555c5d-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cd82-fb555c5d-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cd82-fb555c5d-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cn04-2fe56bfb-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 227,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cn04-2fe56bfb-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 227,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cn04-2fe56bfb-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 227,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cn04-2fe56bfb-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 227,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cn04-2fe56bfb-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 227,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cn04-2fe56bfb-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 227,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cn04-2fe56bfb-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 227,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cn04-2fe56bfb-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 227,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "cn04-2fe56bfb-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 227,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "dc22-fdcac232-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 375,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "dc22-fdcac232-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 374,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "dc22-fdcac232-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 323,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "dc22-fdcac232-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 374,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "dc22-fdcac232-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 374,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "dc22-fdcac232-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 329,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "dc22-fdcac232-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 381,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "dc22-fdcac232-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 382,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "dc22-fdcac232-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 339,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ft09-0d8bbf25-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 724,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ft09-0d8bbf25-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 742,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ft09-0d8bbf25-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 141,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ft09-0d8bbf25-random-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 847,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ft09-0d8bbf25-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 732,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ft09-0d8bbf25-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 144,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ft09-0d8bbf25-random-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ft09-0d8bbf25-norepeat-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 845,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ft09-0d8bbf25-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 136,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "g50t-5849a774-random-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "g50t-5849a774-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "g50t-5849a774-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "g50t-5849a774-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "g50t-5849a774-norepeat-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "g50t-5849a774-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "g50t-5849a774-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "g50t-5849a774-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "g50t-5849a774-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ka59-38d34dbb-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ka59-38d34dbb-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ka59-38d34dbb-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ka59-38d34dbb-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ka59-38d34dbb-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ka59-38d34dbb-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ka59-38d34dbb-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ka59-38d34dbb-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ka59-38d34dbb-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lf52-271a04aa-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 198,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lf52-271a04aa-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 198,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lf52-271a04aa-graph-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lf52-271a04aa-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 196,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lf52-271a04aa-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 198,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lf52-271a04aa-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lf52-271a04aa-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lf52-271a04aa-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lf52-271a04aa-graph-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 194,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lp85-305b61c3-random-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lp85-305b61c3-norepeat-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lp85-305b61c3-graph-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lp85-305b61c3-random-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lp85-305b61c3-norepeat-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lp85-305b61c3-graph-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lp85-305b61c3-random-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lp85-305b61c3-norepeat-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "lp85-305b61c3-graph-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ls20-9607627b-random-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 396,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ls20-9607627b-norepeat-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 396,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ls20-9607627b-graph-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 389,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ls20-9607627b-random-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ls20-9607627b-norepeat-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ls20-9607627b-graph-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 391,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ls20-9607627b-random-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ls20-9607627b-norepeat-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 392,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "ls20-9607627b-graph-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 391,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "m0r0-492f87ba-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 455,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "m0r0-492f87ba-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 455,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "m0r0-492f87ba-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 455,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "m0r0-492f87ba-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 455,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "m0r0-492f87ba-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 455,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "m0r0-492f87ba-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 455,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "m0r0-492f87ba-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 455,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "m0r0-492f87ba-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 455,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "m0r0-492f87ba-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 455,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "r11l-495a7899-random-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 182,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "r11l-495a7899-norepeat-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 182,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "r11l-495a7899-graph-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 182,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "r11l-495a7899-random-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 182,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "r11l-495a7899-norepeat-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 182,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "r11l-495a7899-graph-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 182,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "r11l-495a7899-random-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 182,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "r11l-495a7899-norepeat-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 182,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "r11l-495a7899-graph-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 182,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "re86-8af5384d-random-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "re86-8af5384d-norepeat-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "re86-8af5384d-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "re86-8af5384d-random-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "re86-8af5384d-norepeat-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "re86-8af5384d-graph-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "re86-8af5384d-random-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "re86-8af5384d-norepeat-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "re86-8af5384d-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 302,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "s5i5-18d95033-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "s5i5-18d95033-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "s5i5-18d95033-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "s5i5-18d95033-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "s5i5-18d95033-norepeat-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "s5i5-18d95033-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "s5i5-18d95033-random-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "s5i5-18d95033-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "s5i5-18d95033-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sb26-7fbdac44-random-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sb26-7fbdac44-norepeat-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sb26-7fbdac44-graph-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 1
+    },
+    {
+      "run": "sb26-7fbdac44-random-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sb26-7fbdac44-norepeat-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sb26-7fbdac44-graph-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 1
+    },
+    {
+      "run": "sb26-7fbdac44-random-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sb26-7fbdac44-norepeat-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sb26-7fbdac44-graph-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 1
+    },
+    {
+      "run": "sc25-635fd71a-random-0",
+      "primary_failure_hypothesis": "frontier_selection",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sc25-635fd71a-norepeat-0",
+      "primary_failure_hypothesis": "frontier_selection",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sc25-635fd71a-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 299,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sc25-635fd71a-random-1",
+      "primary_failure_hypothesis": "frontier_selection",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sc25-635fd71a-norepeat-1",
+      "primary_failure_hypothesis": "frontier_selection",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sc25-635fd71a-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 314,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sc25-635fd71a-random-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sc25-635fd71a-norepeat-2",
+      "primary_failure_hypothesis": "frontier_selection",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sc25-635fd71a-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 311,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sk48-d8078629-random-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sk48-d8078629-norepeat-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sk48-d8078629-graph-0",
+      "primary_failure_hypothesis": "frontier_selection",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sk48-d8078629-random-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sk48-d8078629-norepeat-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sk48-d8078629-graph-1",
+      "primary_failure_hypothesis": "frontier_selection",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sk48-d8078629-random-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sk48-d8078629-norepeat-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sk48-d8078629-graph-2",
+      "primary_failure_hypothesis": "frontier_selection",
+      "last_status": "NOT_FINISHED",
+      "unexplained_repeats": 0,
+      "trace_actions": 1000,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sp80-589a99af-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 92,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sp80-589a99af-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 92,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sp80-589a99af-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 92,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sp80-589a99af-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 92,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sp80-589a99af-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 92,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sp80-589a99af-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 69,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sp80-589a99af-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 92,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sp80-589a99af-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 92,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sp80-589a99af-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 92,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "su15-1944f8ab-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 169,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "su15-1944f8ab-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 167,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "su15-1944f8ab-graph-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 98,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "su15-1944f8ab-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 167,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "su15-1944f8ab-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 161,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "su15-1944f8ab-graph-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 101,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "su15-1944f8ab-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 162,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "su15-1944f8ab-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 161,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "su15-1944f8ab-graph-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 99,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tn36-ef4dde99-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 185,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tn36-ef4dde99-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 185,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tn36-ef4dde99-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 185,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tn36-ef4dde99-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 185,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tn36-ef4dde99-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 185,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tn36-ef4dde99-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 185,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tn36-ef4dde99-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 185,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tn36-ef4dde99-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 185,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tn36-ef4dde99-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 185,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tr87-cd924810-random-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 386,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tr87-cd924810-norepeat-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 386,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tr87-cd924810-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 386,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tr87-cd924810-random-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 386,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tr87-cd924810-norepeat-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 386,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tr87-cd924810-graph-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 386,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tr87-cd924810-random-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 386,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tr87-cd924810-norepeat-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 386,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tr87-cd924810-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 386,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tu93-0768757b-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tu93-0768757b-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tu93-0768757b-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tu93-0768757b-random-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tu93-0768757b-norepeat-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tu93-0768757b-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tu93-0768757b-random-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tu93-0768757b-norepeat-2",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "tu93-0768757b-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "vc33-5430563c-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "vc33-5430563c-norepeat-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "vc33-5430563c-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "vc33-5430563c-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "vc33-5430563c-norepeat-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "vc33-5430563c-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "vc33-5430563c-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "vc33-5430563c-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "vc33-5430563c-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 152,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "wa30-ee6fef47-random-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 602,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "wa30-ee6fef47-norepeat-0",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 602,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "wa30-ee6fef47-graph-0",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 602,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "wa30-ee6fef47-random-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 602,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "wa30-ee6fef47-norepeat-1",
+      "primary_failure_hypothesis": "state_encoding",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 602,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "wa30-ee6fef47-graph-1",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 602,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "wa30-ee6fef47-random-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 602,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "wa30-ee6fef47-norepeat-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 602,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "wa30-ee6fef47-graph-2",
+      "primary_failure_hypothesis": "environment_specific_mechanic",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 602,
+      "frontier_recoveries": 0
+    }
+  ]
+}

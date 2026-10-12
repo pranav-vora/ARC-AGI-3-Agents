@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 
 from .agent import Agent, Playback
 from .recorder import Recorder
+from .stage1.agent import Stage1Graph, Stage1NoRepeat, Stage1Random
 from .swarm import Swarm
 from .templates.langgraph_functional_agent import LangGraphFunc, LangGraphTextOnly
 from .templates.langgraph_random_agent import LangGraphRandom
@@ -29,9 +30,20 @@ for rec in Recorder.list():
 
 # update the agent dictionary to include subclasses of LLM class
 AVAILABLE_AGENTS["reasoningagent"] = ReasoningAgent
+AVAILABLE_AGENTS.pop("stage1agent", None)
+AVAILABLE_AGENTS.update(
+    {
+        "stage1random": Stage1Random,
+        "stage1norepeat": Stage1NoRepeat,
+        "stage1graph": Stage1Graph,
+    }
+)
 
 __all__ = [
     "Swarm",
+    "Stage1Graph",
+    "Stage1NoRepeat",
+    "Stage1Random",
     "Random",
     "LangGraphFunc",
     "LangGraphTextOnly",

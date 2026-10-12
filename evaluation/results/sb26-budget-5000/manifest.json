@@ -1,0 +1,26 @@
+{
+  "games": [
+    "sb26-7fbdac44"
+  ],
+  "agents": [
+    "graph",
+    "norepeat"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "budget": 5000,
+  "timeout_seconds": 600,
+  "python": "3.12.14",
+  "packages": {
+    "torch": "2.14.1",
+    "arc-agi": "0.9.1",
+    "arcengine": "0.9.3"
+  },
+  "execution": "sequential isolated offline processes",
+  "policy_version": 2,
+  "local_ranking": "matched progress/failure/novelty priorities for graph and norepeat",
+  "torch_threads": 1
+}

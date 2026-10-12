@@ -1,0 +1,60 @@
+{
+  "scheduled_runs": 6,
+  "inspected_runs": 6,
+  "passed": true,
+  "issues": [],
+  "memory_audit_limit_mib": 1024,
+  "max_runtime_seconds": 107.71987790009007,
+  "peak_process_memory_mib": 421.78125,
+  "failure_classification_note": "Hypotheses from traces, not proof of hidden mechanics; see representative source/observation inspection in FAILURE_MODES.md.",
+  "runs": [
+    {
+      "run": "sb26-7fbdac44-graph-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 4536,
+      "frontier_recoveries": 64
+    },
+    {
+      "run": "sb26-7fbdac44-norepeat-0",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 4840,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sb26-7fbdac44-graph-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 4542,
+      "frontier_recoveries": 64
+    },
+    {
+      "run": "sb26-7fbdac44-norepeat-1",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 4784,
+      "frontier_recoveries": 0
+    },
+    {
+      "run": "sb26-7fbdac44-graph-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 4520,
+      "frontier_recoveries": 64
+    },
+    {
+      "run": "sb26-7fbdac44-norepeat-2",
+      "primary_failure_hypothesis": "action_generation",
+      "last_status": "GAME_OVER",
+      "unexplained_repeats": 0,
+      "trace_actions": 4821,
+      "frontier_recoveries": 0
+    }
+  ]
+}

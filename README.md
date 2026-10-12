@@ -1,5 +1,14 @@
 # ARC-AGI-3-Agents
 
+## PyTorch Stage 1 explorer
+
+Three additional agents (`stage1random`, `stage1norepeat`, and `stage1graph`)
+provide a reproducible comparison of random actions, per-state action memory,
+and graph-based frontier recovery. See [setup, design, and evaluation commands](agents/stage1/README.md).
+PyTorch runs on CPU; no model training or LLM access is required by these agents.
+See [validation notes and public benchmark results](evaluation/VALIDATION.md)
+for measured outcomes and gate-by-gate evidence.
+
 ## Quickstart
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) if not aready installed.

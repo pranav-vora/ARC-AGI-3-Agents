@@ -1,33 +1,25 @@
 import os
-import shutil
 
 import pytest
-
 from arcengine import FrameData, GameState
 
 
-def get_test_recordings_dir():
-    conftest_dir = os.path.dirname(os.path.abspath(__file__))
-    return os.path.join(conftest_dir, "recordings")
-
-
 @pytest.fixture(scope="session", autouse=True)
-def clean_test_recordings():
-    test_recordings_dir = get_test_recordings_dir()
-
+def clean_test_recordings(tmp_path_factory):
+    # Avoid deleting a shared OneDrive directory and isolate concurrent pytest runs.
+    test_recordings_dir = str(tmp_path_factory.mktemp("recordings"))
+    original_dir = os.environ.get("RECORDINGS_DIR")
     os.environ["RECORDINGS_DIR"] = test_recordings_dir
-
-    if os.path.exists(test_recordings_dir):
-        shutil.rmtree(test_recordings_dir)
-    os.makedirs(test_recordings_dir, exist_ok=True)
-
     yield test_recordings_dir
+    if original_dir is None:
+        os.environ.pop("RECORDINGS_DIR", None)
+    else:
+        os.environ["RECORDINGS_DIR"] = original_dir
 
 
 @pytest.fixture
-def temp_recordings_dir(clean_test_recordings):
-    test_recordings_dir = get_test_recordings_dir()
-
+def temp_recordings_dir(clean_test_recordings, tmp_path):
+    test_recordings_dir = str(tmp_path / "recordings")
     os.makedirs(test_recordings_dir, exist_ok=True)
 
     original_dir = os.environ.get("RECORDINGS_DIR")
